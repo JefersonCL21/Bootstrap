@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Bootstrap</title>
+    <link rel="stylesheet" href="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_css_bootstrap.min.css">
+    <style>
+        section{
+            height: 100vh;
+            border-color: azure;
+            padding-top: 80px;
+            background-color: rgb(245, 239, 239);
+        }
+
+        #inicio img{
+                height: 600px;
+            }
+
+        header{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+
+        @media (max-width: 768px) {  /* Quando a largura da tela for de até 768px (típico breakpoint para tablets) */
+            section{
+                height: 100vh;
+                border-color: azure;
+                padding-top: 100px;
+                background-color: rgb(245, 239, 239);
+            }
+            header{
+                position: sticky;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+            }
+
+            #inicio {
+                height: 450px;
+            }
+            #inicio img{
+                height: 300px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Minha loja de café</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle = "collapse" data-bs-target ="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produto">Produtos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <h2>Início</h2>
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="2000" class="carousel-item active">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/04/25/08/02/coffee-beans-2258839_1280.jpg" alt="">
+                        <div class="carousel-caption">
+                            <h2>Foto do café especial</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2000" class="carousel-item">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg" alt="">
+                        <div class="carousel-caption">
+                            <h2>Foto do café especial</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2000" class="carousel-item">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/12/17/21/44/drink-3025022_1280.jpg" alt="">
+                        <div class="carousel-caption">
+                            <h2>Foto do café especial</h2>
+                        </div>
+                    </div>
+                </div>
+                <button data-bs-target = "#carousel-exemplo" data-bs-slide = "prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+        
+                </div>
+            </div>
+        </section>
+        <section id="produto">
+            <h2>Produtos</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Café Arábica Première
+                            </div>
+                            <img src="https://via.placeholder.com/100x100" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Descrição</h4>                                
+                                <p class="card-text">
+                                    Mergulhe na rica tapeçaria de sabores do nosso Café Arábica Première. Cultivado nas altas terras montanhosas, este café é conhecido por seu sabor suave e notas levemente adocicadas. A cada gole, sinta a harmoniosa mistura de acidez média e sutis toques de frutas e nozes.
+                                </p>
+                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Arábica Golden Harvest
+                            </div>
+                            <img src="https://via.placeholder.com/100x100" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Descrição</h4>                                
+                                <p class="card-text">
+                                    Apresentando o Arábica Golden Harvest - uma joia da nossa coleção. Este café é processado com um método especial que destaca sua doçura inerente e corpo pleno. Deguste e descubra camadas complexas de cacau, caramelo e um final delicadamente frutado.
+                                </p>
+                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Mountain Whisper
+                            </div>
+                            <img src="https://via.placeholder.com/100x100" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Descrição</h4>                                
+                                <p class="card-text">
+                                    Mountain Whisper é o nosso café Arábica que fala diretamente ao coração dos apreciadores de café. Com sua fragrância envolvente e um sabor que evoca o frescor das montanhas, este café é a perfeita representação da natureza em sua forma mais pura. Toques florais se misturam a nuances de baunilha neste café verdadeiramente excepcional.
+                                </p>
+                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_js_bootstrap.bundle.min.js"></script>
+</body>
+</html>
